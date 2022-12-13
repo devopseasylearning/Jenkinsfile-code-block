@@ -1,4 +1,4 @@
-################ Sample Jenkinsfile
+## Sample Jenkinsfile
 ```
 pipeline {
     agent any
@@ -17,7 +17,7 @@ pipeline {
 ```
 
 
-################ Set a global agent
+## Set a global agent
 ```
 pipeline {
     agent any
@@ -37,7 +37,7 @@ pipeline {
 }
 ```
 
-################ Set multiple global agents
+## Set multiple global agents
 
 ```
 pipeline {
@@ -61,7 +61,7 @@ pipeline {
 
 
 
-############### HOW TO SET AGENT 
+# HOW TO SET AGENT 
 
 ```
 pipeline {
@@ -80,7 +80,7 @@ pipeline {
 }
 ```
 
-################ HOW TO SET buildDiscarder 
+## HOW TO SET buildDiscarder 
 
 ```
 pipeline {
@@ -105,7 +105,7 @@ options {
 ```
 
 
-################ HOW TO SET environment Variable
+## HOW TO SET environment Variable
 
 ```
 pipeline {
@@ -126,7 +126,7 @@ pipeline {
 }
 ```
 
-################ HOW TO SET Parameters
+## HOW TO SET Parameters
 ```
 pipeline {
     agent any
@@ -171,7 +171,7 @@ pipeline {
 
 
 
-################ HOW TO SET SonarQube Block
+## HOW TO SET SonarQube Block
 
 ```
 pipeline {
@@ -209,7 +209,7 @@ pipeline {
 ```
 
 
-################ HOW TO login in dockerhub
+## HOW TO login in dockerhub
 
 ```
 pipeline {
@@ -238,7 +238,7 @@ pipeline {
 }
 ```
 
-################ HOW TO SET condition
+## HOW TO SET condition
 
 ```
 pipeline {
@@ -353,7 +353,7 @@ pipeline {
 
 
 
-################ HOW TO SET  AND (&&) conditiion
+## HOW TO SET  AND (&&) conditiion
 
 ```
 pipeline {
@@ -419,7 +419,7 @@ pipeline {
 
 
 
-################ HOW TO SET  OR (||) conditiion
+## HOW TO SET  OR (||) conditiion
 
 
 ```
@@ -484,7 +484,7 @@ pipeline {
 }
 ```
 
-################ Sample post condition slack
+## Sample post condition slack
 ```
 pipeline {
     agent any
@@ -521,7 +521,7 @@ post {
 
 
 
-################ Sample post condition with Python interpreter
+## Sample post condition with Python interpreter
 ```
 pipeline {
     agent any
@@ -613,7 +613,7 @@ def notifyUpgrade(String buildResult, String whereAt) {
 ```
 
 
-################ Sample post condition slack Multibranch pipeline
+## Sample post condition slack Multibranch pipeline
 
 ```
 pipeline {
@@ -656,7 +656,7 @@ pipeline {
 
 
 
-################ Define agent for a single stage
+## Define agent for a single stage
 
 ```
 pipeline {
