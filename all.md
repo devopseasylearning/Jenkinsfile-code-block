@@ -80,6 +80,82 @@ pipeline {
 }
 ```
 
+
+## How to set global docker agent
+```
+pipeline {
+    
+
+agent {
+    docker {
+        image 'maven:3.8.1-adoptopenjdk-11'
+        label 'my-defined-label'
+        args  '-v /tmp:/tmp'
+    }
+}
+
+
+
+    stages {
+        stage('Hello') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+    }
+}
+```
+
+
+
+## How to set  TIMEOUT
+```
+pipeline {
+
+    options {
+      timeout(time: 1, unit: 'HOURS') 
+  }  
+
+agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+    }
+}
+```
+
+
+## How to set  environemnt in stage
+
+```
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            environment { 
+                AN_ACCESS_KEY = credentials('my-predefined-secret-text') 
+            }
+            steps {
+                sh 'printenv'
+            }
+        }
+    }
+}
+```
+
+
+
+
 ## HOW TO SET buildDiscarder 
 
 ```
