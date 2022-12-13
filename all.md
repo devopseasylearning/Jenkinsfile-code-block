@@ -61,11 +61,11 @@ pipeline {
 
 
 
-# HOW TO SET AGENT 
+# HOW TO SET NO AGENT 
 
 ```
 pipeline {
-    agent any
+    agent none
 
     stages {
         stage('Hello') {
