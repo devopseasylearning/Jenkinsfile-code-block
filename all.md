@@ -20,7 +20,6 @@ pipeline {
 ## Set a global agent
 ```
 pipeline {
-    agent any
     agent {
                 label ("Node2")
             }
