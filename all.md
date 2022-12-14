@@ -80,6 +80,33 @@ pipeline {
 ```
 
 
+## Define agent for a single stage
+
+```
+pipeline {
+    agent any
+
+    stages {
+        agent {
+            docker {
+
+              image 'maven:latest'
+            }
+           }
+        stage('Hello') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+    }
+}
+```
+
+
+
 ## How to set global docker agent
 ```
 pipeline {
@@ -731,28 +758,5 @@ pipeline {
 
 
 
-## Define agent for a single stage
 
-```
-pipeline {
-    agent any
-
-    stages {
-        agent {
-            docker {
-
-              image 'maven:latest'
-            }
-           }
-        stage('Hello') {
-            steps {
-                sh '''
-                ls 
-                pwd
-                '''
-            }
-        }
-    }
-}
-```
 
