@@ -80,7 +80,31 @@ pipeline {
 ```
 
 
-## Define agent for a single stage
+
+## How set agent in stage
+
+```
+pipeline {
+    agent any
+
+    stages {
+      agent { 
+          label "node1"
+           }
+        stage('Hello') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+    }
+}
+```
+
+
+## Define docker agent for a single stage
 
 ```
 pipeline {
