@@ -546,7 +546,7 @@ pipeline {
       when{ 
           
           expression {
-            env.Environment == 'Dev' ||  env.Branch == 'develop'  }
+            env.Environment == 'Dev' &&  env.Branch == 'develop'  }
           
             }
       
@@ -613,7 +613,7 @@ pipeline {
       when{ 
           
           expression {
-            env.Environment == 'Dev' &&  env.Branch == 'develop'  }
+            env.Environment == 'Dev' ||  env.Branch == 'develop'  }
           
             }
       
