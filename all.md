@@ -87,13 +87,14 @@ pipeline {
     agent any
 
     stages {
-        agent {
+
+        stage('Hello') {
+	 agent {
             docker {
 
               image 'maven:latest'
             }
            }
-        stage('Hello') {
             steps {
                 sh '''
                 ls 
