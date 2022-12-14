@@ -88,10 +88,11 @@ pipeline {
     agent any
 
     stages {
-      agent { 
+
+      stage('Hello') {
+	agent { 
           label "node1"
            }
-        stage('Hello') {
             steps {
                 sh '''
                 ls 
