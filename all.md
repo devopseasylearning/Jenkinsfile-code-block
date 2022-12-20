@@ -40,7 +40,6 @@ pipeline {
 
 ```
 pipeline {
-    agent any
     agent {
                 label ("Node1 || Node2 || Node3 || Node4")
             }
