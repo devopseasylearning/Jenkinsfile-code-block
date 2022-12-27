@@ -888,7 +888,20 @@ stage('backup') {
 ## Query Jenkins Secret store
 
 ```
-stage('backup') {
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+    stage('backup') {
 
 	      steps {
 	        script {
@@ -910,6 +923,10 @@ stage('backup') {
 	      }
 
 	    }
+
+
+    }
+}
 ```
 
 ```
