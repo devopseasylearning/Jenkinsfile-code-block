@@ -912,5 +912,21 @@ stage('backup') {
 	    }
 ```
 
-
+```
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            environment { 
+                IMAGE = credentials('ubuntu') 
+            }
+            steps {
+                sh '''
+                docker run -i $IMAGE ls 
+                '''
+            }
+        }
+    }
+}
+```
 
