@@ -1,0 +1,43 @@
+Jenkins Built-in Environment Variables
+
+    Build Variables
+        BUILD_NUMBER: The current build number, such as "153".
+        BUILD_ID: The current build ID, same as BUILD_NUMBER.
+        BUILD_DISPLAY_NAME: The display name of the current build, which can be modified.
+        BUILD_TAG: String of "jenkins-${JOB_NAME}-${BUILD_NUMBER}". Convenient to put into a resource file, a jar file, etc. for easier identification.
+        BUILD_URL: URL of the build that triggered the job.
+
+    Project Variables
+        JOB_NAME: Name of the project of this build, such as "foo" or "foo/bar".
+        JOB_BASE_NAME: Short name of the project of this build stripping off folder paths, such as "foo" for "bar/foo".
+        JOB_URL: URL to the job that triggered the build.
+
+    Workspace Variables
+        WORKSPACE: The absolute path of the directory assigned to the build as a workspace.
+        WORKSPACE_TMP: A temporary directory inside the workspace that is removed after the build finishes.
+
+    Node Variables
+        NODE_NAME: Name of the node the current build is running on.
+        NODE_LABELS: Whitespace-separated list of labels assigned to the node.
+        EXECUTOR_NUMBER: The unique number that identifies the current executor.
+
+    SCM Variables
+        GIT_COMMIT: The commit hash being checked out.
+        GIT_PREVIOUS_COMMIT: The commit hash of the previous build.
+        GIT_BRANCH: The name of the branch being checked out.
+        GIT_URL: The URL of the remote repository.
+
+    Trigger Variables
+        BUILD_CAUSE: The cause of the build (e.g., MANUALTRIGGER, UPSTREAMTRIGGER, SCMTRIGGER).
+        BUILD_USER: The user who triggered the build.
+        BUILD_USER_ID: The ID of the user who triggered the build.
+
+    Jenkins Instance Variables
+        JENKINS_HOME: The absolute path of the directory assigned on the master node for Jenkins to store data.
+        JENKINS_URL: URL of the Jenkins master that's running the build.
+        JENKINS_PORT: TCP port of the Jenkins master that's running the build.
+
+    Environment Variables
+        PATH+EXTRA: Prepends the specified value to the PATH environment variable.
+        JAVA_HOME: Path to the Java Development Kit (JDK) installation.
+        MAVEN_HOME: Path to the Maven installation.
